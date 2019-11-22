@@ -1,14 +1,40 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+<ion-header color="secondary">
+  <ion-toolbar color="base">
+      <ion-img class="ion-float-left" src="assets/galeria/logoTec.png" width="40" style="height:65px"></ion-img>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content color="medium">
+  <form>
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+      
+          <div padding>
+            <ion-img src="assets/galeria/imagen.png" width="100" style="height:150px"></ion-img>
+            <br>
+            <div text-center>
+              <h3>Login</h3>
+            </div>
+            <ion-item>
+              <ion-input name="nocontrol" type="text" placeholder="Numeto de control" required>
+              </ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Nip" required>
+              </ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button color="dark" routerLink="/usuario" expand="block" size="large">Login</ion-button>
+
+          </div>
+       
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
 </ion-content>
