@@ -21,8 +21,11 @@ export class LoginService {
    
   });
   API_URI="http://104.248.94.77/api/v1";
+
+  //LOGGEO CON UREL BASE+USER/STUDENT/LOGIN
+  //modelo user
   loginUser(user:User){
-    
+                    //se toma valores del modelo student
     return this.http.post<Student>(`${this.API_URI}/user/student/login`,user)
 
   }

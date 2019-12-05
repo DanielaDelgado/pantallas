@@ -13,6 +13,7 @@ import {NgForm, FormGroup,FormBuilder,ReactiveFormsModule} from '@angular/forms/
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+  //variables de los modelos de datos de estudiante, form, y usuario(usuario es utilizado para loggeo nc y pass)
    public myForm:FormGroup;
    public user:User;
    public student:Student
@@ -27,13 +28,19 @@ export class HomePage implements OnInit {
     })
   
    }
+   //FUNCION DE LOGIN 
   onLogin(){
     this.user={
+      //SE RECIBEN LOS VALORES DEL FORM EN ESTE CASO EL NC Y EL PASS
       nc:this.myForm.value.nc,
       password:this.myForm.controls.password.value
     }
+    //SE MANDA LLAMAR EL SERVICIO LOGIN JUNTO CON EL METODO EL CUAL RECIBE AL MODELO USER
+
     this.loginService.loginUser(this.user).subscribe (
       res=>{
+        //AQUI SE OBTIENE LOS DATOS (STUDENT) TOKEN Y ID PARA SER MOSTRADOS, AUN NO SE IMPLEMENTA LA RUTA PARA MANDAR 
+        //A LA OTRA VENTANA, PERO IGUAL DEBERIA OBTENER LOS DATOS
         this.result=true;
         this.student=res;
         this.loginService.studentDatos=this.student;
