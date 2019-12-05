@@ -1,40 +1,38 @@
 <ion-header color="secondary">
-  <ion-toolbar color="base">
-      <ion-img class="ion-float-left" src="assets/galeria/logoTec.png" width="40" style="height:65px"></ion-img>
-  </ion-toolbar>
+    <ion-toolbar color="base">
+        <ion-img class="ion-float-left" src="assets/galeria/logoTec.png" width="40" style="height:65px"></ion-img>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content color="medium">
-  <form>
-    <ion-grid>
-      <ion-row color="primary" justify-content-center>
-        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-      
-          <div padding>
-            <ion-img src="assets/galeria/imagen.png" width="100" style="height:150px"></ion-img>
-            <br>
-            <div text-center>
-              <h3>Login</h3>
-            </div>
-            <ion-item>
-              <ion-input name="nocontrol" type="text" placeholder="Numeto de control" required>
-              </ion-input>
-            </ion-item>
-          </div>
-          <div padding>
-            <ion-item>
-              <ion-input name="password" type="password" placeholder="Nip" required>
-              </ion-input>
-            </ion-item>
-          </div>
-          <div padding>
-            <ion-button color="dark" routerLink="/usuario" expand="block" size="large">Login</ion-button>
+    <form [formGroup]="myForm">
+        <ion-grid>
+            <ion-row color="primary" justify-content-center>
+                <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
 
-          </div>
-       
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </form>
+                    <div padding>
+                        <ion-img src="assets/galeria/imagen.png" width="100" style="height:150px"></ion-img>
+                        <br>
+                        <div text-center>
+                            <h3>Login</h3>
+                        </div>
+                        <ion-item>
+                            <ion-input name="nc" type="text" formControlName="nc" placeholder="Numeto de control" required>
+                            </ion-input>
+                        </ion-item>
+                    </div>
+                    <div padding>
+                        <ion-item>
+                            <ion-input name="password" type="password" formControlName="password" placeholder="Nip" required>
+                            </ion-input>
+                        </ion-item>
+                    </div>
+                    <div padding>
+                        <ion-button color="dark" tappable (click)="onLogin()" expand="block" size="large">Login</ion-button>
 
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
 </ion-content>
