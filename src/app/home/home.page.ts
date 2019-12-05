@@ -24,7 +24,7 @@ export class HomePage implements OnInit {
   ngOnInit(){
     this.myForm=this.fb.group({
       nc:[""],
-      password:[""]
+      nip:[""]
     })
   
    }
@@ -33,7 +33,7 @@ export class HomePage implements OnInit {
     this.user={
       //SE RECIBEN LOS VALORES DEL FORM EN ESTE CASO EL NC Y EL PASS
       nc:this.myForm.value.nc,
-      password:this.myForm.controls.password.value
+      nip:this.myForm.controls.nip.value
     }
     //SE MANDA LLAMAR EL SERVICIO LOGIN JUNTO CON EL METODO EL CUAL RECIBE AL MODELO USER
 

@@ -26,6 +26,7 @@ export class LoginService {
   //modelo user
   loginUser(user:User){
                     //se toma valores del modelo student
+    console.log(user);
     return this.http.post<Student>(`${this.API_URI}/user/student/login`,user)
 
   }
