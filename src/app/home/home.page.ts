@@ -2,10 +2,12 @@ import { Component,OnInit } from '@angular/core';
 import {LoginService} from '../services/login.service';
 import {User} from '../models/user'
 import {Student} from '../models/student'
+import { AlertController } from '@ionic/angular';
 
 import { Router } from '@angular/router';
 import { from } from 'rxjs';
 import {NgForm, FormGroup,FormBuilder,ReactiveFormsModule} from '@angular/forms/'
+
 
 @Component({
   selector: 'app-home',
@@ -19,7 +21,8 @@ export class HomePage implements OnInit {
    public student:Student
    public result=true;
 
-  constructor(private loginService: LoginService,private router:Router,private fb:FormBuilder) {}
+  constructor(private loginService: LoginService,private router:Router,private fb:FormBuilder, 
+    private alertCtrl:AlertController) {}
   
   ngOnInit(){
     this.myForm=this.fb.group({
@@ -51,9 +54,29 @@ export class HomePage implements OnInit {
         console.log(this.loginService.id);
       },err=>this.result=false
     )
+
+
+    //intento
+    const user:any= this.loginService.loginUser(this.user);
+    console.log(user);
+    if(this.result) {
+      console.log('successfully logged user');
+      this.router.navigateByUrl('/usuario');
+      console.log("dato correcto");
+    }else{
+      console.log("dato incorrecto ");
+        const alert= this.alertCtrl.create({
+        header:'Datos incorrectos',
+        message:"los datos son incorrectos",
+        buttons:[
+          {
+            text:'salir',
+          }
+        ]
+      });
+       alert;
   }
-
-
+  }
   /*
   onLogin() {
      this.user={

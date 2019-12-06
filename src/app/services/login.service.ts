@@ -30,6 +30,10 @@ export class LoginService {
     return this.http.post<Student>(`${this.API_URI}/user/student/login`,user)
 
   }
+
+  usuario(studentDatos:Student){
+    return this.http.get<Student>(`${this.API_URI}/user/student/:_id`)
+  }
 /*
   setUser(user: User): void {
     let user_string = JSON.stringify(user);
