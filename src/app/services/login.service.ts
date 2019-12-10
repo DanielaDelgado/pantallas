@@ -37,6 +37,11 @@ export class LoginService {
   usuario(studentDatos: Student) {
     return this.http.get<Student>(`${this.API_URI}/user/student/`)
   }
+
+  
+  updateStudent(student:Student, _id:string){
+    return this.http.put<Student>(`${this.API_URI}/user/student/:_id`,student)
+  }
   /*
     setUser(user: User): void {
       let user_string = JSON.stringify(user);

@@ -16,6 +16,7 @@
         <ion-img class="ion-float-center" src="assets/galeria/icon.png" width="40" style="height:65px"></ion-img>
         <div text-center padding>
             <h2>Editar datos</h2>
+            <ion-icon name="checkmark"></ion-icon>
         </div>
 
     </div>
@@ -23,59 +24,116 @@
 
     <div text-center class="datos" ion-float-center margin>
         <h1>Nombre </h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.firstName}}"></ion-input>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="firstName" type="text" value="{{student.user.student.firstName}}"></ion-input>
+            </ion-item>
+        </form>
 
         <h1> Apellido Paterno</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.fatherLastName}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="fatherLastName" type="text" value="{{student.user.student.fatherLastName}}"></ion-input>
+            </ion-item>
+        </form>
+
 
         <h1> Apellido Materno</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.motherLastName}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="motherLastName" type="text" value="{{student.user.student.motherLastName}}"></ion-input>
+            </ion-item>
+        </form>
+
 
         <h1> Sexo</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.sex}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="sex" type="text" value="{{student.user.student.sex}}"></ion-input>
+            </ion-item>
+        </form>
+
 
         <h1> Email</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.email}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="email" type="text" value="{{student.user.student.email}}"></ion-input>
+            </ion-item>
+        </form>
+
 
         <h1> Estado Civil</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.civilStatus}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="civilStatus" type="text" value="{{student.user.student.civilStatus}}"></ion-input>
+            </ion-item>
+        </form>
+
+
 
         <h1> Ciudad</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.city}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="city" type="text" value="{{student.user.student.city}}"></ion-input>
+            </ion-item>
+        </form>
+
 
         <h1> Estado</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.state}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="state" type="text" value="{{student.user.student.state}}"></ion-input>
+            </ion-item>
+        </form>
+
 
         <h1> Código Postal</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.cp}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="cp" type="text" value="{{student.user.student.cp}}"></ion-input>
+            </ion-item>
+        </form>
+
 
         <h1> Teléfono</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.phone}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="phone" type="text" value="{{student.user.student.phone}}"></ion-input>
+            </ion-item>
+        </form>
+
 
         <h1> Colonia</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.suburb}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="suburb" type="text" value="{{student.user.student.suburb}}"></ion-input>
+            </ion-item>
+        </form>
+
 
         <h1> Calle</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.street}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="street" type="text" value="{{student.user.student.street}}"></ion-input>
+            </ion-item>
+        </form>
+
 
         <h1> Etnia</h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.etnia}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="etnia" type="text" value="{{student.user.student.etnia}}"></ion-input>
+            </ion-item>
+        </form>
+
 
         <h1> Escuela de origen </h1>
-        <ion-input name="nombre" type="text" value="{{student.user.student.originSchool}}"></ion-input>
-        <ion-icon name="checkmark"></ion-icon>
+        <form [formGroup]="myForm">
+            <ion-item>
+                <ion-input name="originSchool" type="text" value="{{student.user.student.originSchool}}"></ion-input>
+            </ion-item>
+        </form>
+
     </div>
 
 
