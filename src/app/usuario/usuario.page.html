@@ -1,40 +1,40 @@
 <ion-header>
-  <ion-toolbar color="base">
+    <ion-toolbar color="base">
 
-    <ion-img class="ion-float-left" src="assets/galeria/logoTec.png" width="40" style="height:65px"></ion-img>
+        <ion-img class="ion-float-left" src="assets/galeria/logoTec.png" width="40" style="height:65px"></ion-img>
 
-  </ion-toolbar>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content color="medium">
 
-  <div class="primero" padding>
-    <ion-buttons slot="start">
-      <ion-back-button color="base" defaultHref="/"></ion-back-button>
-    </ion-buttons>
-    <ion-img class="ion-float-center" src="assets/galeria/icon.png" width="40" style="height:65px"></ion-img>
-    <div text-center padding>
-      <ion-button color="dark">
-        <ion-icon name="brush"></ion-icon>
-      </ion-button>
+    <div class="primero" padding>
+        <ion-buttons slot="start">
+            <ion-back-button color="base" defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-img class="ion-float-center" src="assets/galeria/icon.png" width="40" style="height:65px"></ion-img>
+        <div text-center padding>
+            <ion-button color="dark">
+                <ion-icon name="brush"></ion-icon>
+            </ion-button>
+        </div>
+
     </div>
 
-  </div>
+
+    <div class="segundo" text-center padding>
+
+        <h1>Nombre Apellidos:{{student.user.student.fullName}}</h1>
+        <p>No. Control: {{student.user.student.controlNumber}}</p>
+        <p>Carrera: {{student.user.student.career}}</p>
+        <ion-icon name="settings" routerLink="/editar"></ion-icon>
+    </div>
+
+    <div padding class="tercero" routerLink="/expediente" margin>
+        <ion-img class="ion-float-left" src="assets/galeria/icon.png" width="20" style="height:45px" margin-right></ion-img>
+        <h5>Expediente</h5>
 
 
-  <div class="segundo" text-center padding>
-
-    <h1>Nombre Apellidos: {{nombre}}</h1>
-    <p>No. Control: 12345678</p>
-    <p>Carrera: Carrera</p>
-    <ion-icon name="settings" routerLink="/editar"></ion-icon>
-  </div>
-
-  <div padding class="tercero"  routerLink="/expediente" margin>
-      <ion-img class="ion-float-left" src="assets/galeria/icon.png" width="20" style="height:45px" margin-right ></ion-img>
-      <h5>Expediente</h5>
-   
-
-  </div>
+    </div>
 
 </ion-content>

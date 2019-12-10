@@ -25,7 +25,13 @@
                         <ion-item>
                             <ion-input name="nip" type="password" formControlName="nip" placeholder="Nip" required>
                             </ion-input>
+
                         </ion-item>
+                    </div>
+                    <div *ngIf="!result">
+                        <label>
+                            Mal
+                        </label>
                     </div>
                     <div padding>
                         <ion-button color="dark" tappable (click)="onLogin()" expand="block" size="large">Login</ion-button>

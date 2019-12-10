@@ -1,33 +1,82 @@
 <ion-header>
-  <ion-toolbar color="light">
-    <ion-buttons slot="start" color="medium">
-      <ion-back-button defaultHref="/"></ion-back-button>
-    </ion-buttons>
+    <ion-toolbar color="light">
+        <ion-buttons slot="start" color="medium">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
 
-    <ion-img class="ion-float-left" src="assets/galeria/logoTec.png" width="40" style="height:65px"></ion-img>
+        <ion-img class="ion-float-left" src="assets/galeria/logoTec.png" width="40" style="height:65px"></ion-img>
 
-  </ion-toolbar>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content color="base">
 
-  <div padding>
+    <div padding>
 
-    <ion-img class="ion-float-center" src="assets/galeria/icon.png" width="40" style="height:65px"></ion-img>
-    <div text-center padding>
-      <h2>Editar datos</h2>
+        <ion-img class="ion-float-center" src="assets/galeria/icon.png" width="40" style="height:65px"></ion-img>
+        <div text-center padding>
+            <h2>Editar datos</h2>
+        </div>
+
     </div>
 
-  </div>
 
+    <div text-center class="datos" ion-float-center margin>
+        <h1>Nombre </h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.firstName}}"></ion-input>
 
-  <div text-center class="datos" ion-float-center margin>
-    <h1>Nombre </h1>
-    <ion-input name="nombre" type="text" placeholder="nombre"></ion-input>
-    <h1> Apellidos</h1>
-    <ion-input name="apellidos" type="text" placeholder="apellidos"></ion-input>
+        <h1> Apellido Paterno</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.fatherLastName}}"></ion-input>
         <ion-icon name="checkmark"></ion-icon>
-  </div>
+
+        <h1> Apellido Materno</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.motherLastName}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+
+        <h1> Sexo</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.sex}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+
+        <h1> Email</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.email}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+
+        <h1> Estado Civil</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.civilStatus}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+
+        <h1> Ciudad</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.city}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+
+        <h1> Estado</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.state}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+
+        <h1> Código Postal</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.cp}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+
+        <h1> Teléfono</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.phone}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+
+        <h1> Colonia</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.suburb}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+
+        <h1> Calle</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.street}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+
+        <h1> Etnia</h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.etnia}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+
+        <h1> Escuela de origen </h1>
+        <ion-input name="nombre" type="text" value="{{student.user.student.originSchool}}"></ion-input>
+        <ion-icon name="checkmark"></ion-icon>
+    </div>
 
 
 
