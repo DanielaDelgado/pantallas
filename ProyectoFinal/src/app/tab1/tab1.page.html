@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar color="base">
+      <ion-img src="assets/image/logotecnm.png" style="max-width:50%;width:auto;height:auto;display:inline-flex;"></ion-img>
+      <ion-buttons slot="primary">
+          <ion-button color="azultecnm" (click)="onLogout()">
+            <ion-icon slot="icon-only" name="exit"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="azultecnm" class="ion-padding">
+
+    <div text-center padding>
+        
+        <ion-avatar *ngIf="existeFoto" style="max-width:50%;width:auto;height:auto;display:inline-flex;">
+                <ion-img class="ion-float-center" [src]="'data:image/png;base64,' + foto"></ion-img>
+        </ion-avatar>
+    
+        <div style="margin-top: 10px;">
+                <ion-icon name="camera" (click)="useCamera()" size="large"></ion-icon>
+                &nbsp;
+                <ion-icon name="crop" routerLink="/editar" size="large"></ion-icon>
+        </div>
+    </div>
+
+    <div class="segundo" text-center>
+        <h3>{{student.user.student.fullName}}</h3>
+        <h5>{{student.user.student.controlNumber}}</h5>
+        <h6>{{student.user.student.career}}</h6>
+        <ion-icon name="create" routerLink="/information" size="large"></ion-icon>
+    </div>
+
+</ion-content>

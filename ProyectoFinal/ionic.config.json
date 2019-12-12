@@ -1,0 +1,7 @@
+{
+  "name": "DAM-ProyectoFinal-Inscripciones",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

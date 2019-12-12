@@ -1,0 +1,41 @@
+<ion-content color="azultecnm" padding>
+
+  <ion-grid>
+    <form [formGroup]="myForm">
+      <ion-row color="tertiary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <ion-img src="assets/image/escudoitt.png" style="max-width:50%;width:auto;height:auto;display:inline-flex;"></ion-img>
+            <h4><strong>Iniciar Sesión</strong></h4>
+            <br>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-label position="floating">Numero de Control</ion-label>
+              <ion-input formControlName="nc" type="text"></ion-input>
+            </ion-item>
+          <br>
+            <ion-item>
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input formControlName="nip" type="password"></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button size="large" type="button" [disabled]="!myForm.valid" (click)="onLogin()" expand="block" color="primary">
+              Ingresar
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </form>
+    <ion-row color="tertiary" justify-content-center>
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+        <div text-center>
+            <hr color="white">
+            Sí no recuerdas tus datos, acude al Departamento de Servicios Escolares !
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>
