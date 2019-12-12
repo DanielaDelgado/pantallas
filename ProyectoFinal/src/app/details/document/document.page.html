@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar color="base">
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+      <ion-img src="assets/image/logotecnm.png" style="max-width:50%;width:auto;height:auto;display:inline-flex;"></ion-img>
+      <ion-buttons slot="primary">
+          <ion-button color="azultecnm" (click)="onLogout()">
+            <ion-icon slot="icon-only" name="exit"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content text-center justify-content-center>
+  <ion-card color="azultecnm" class="ion-margin">
+      <div>
+          <h1>{{documento}}</h1>
+          <h4>{{estatus}}</h4>
+          <h5>{{mensaje}}</h5>
+          <h6>{{observacion}}</h6>
+      </div>
+  </ion-card>
+  <div text-center>
+      <ion-img src="assets/image/escudoitt.png" style="max-width:30%;width:auto;height:auto;display:inline-flex;"></ion-img>
+      <br>
+    </div>
+  <ion-card color="azultecnm" class="ion-margin">
+
+      <ion-item *ngFor="let e of est.slice().reverse()" color="azultecnm"  lines="full" (click)="detalleStatus(e)">
+          <ion-label>
+            <h2>
+              <strong>{{e.date.split("T",1)}}</strong>
+            </h2>
+          </ion-label>
+          <ion-label>{{e.name}}</ion-label>
+      </ion-item>
+  </ion-card>
+</ion-content>

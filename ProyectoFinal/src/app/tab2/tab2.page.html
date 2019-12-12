@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-img src="assets/image/logotecnm.png" style="max-width:50%;width:auto;height:auto;display:inline-flex;"></ion-img>
+      <ion-buttons slot="primary">
+          <ion-button color="azultecnm" (click)="onLogout()">
+            <ion-icon slot="icon-only" name="exit"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="azultecnm">
+
+    <ion-item *ngFor="let d of documentos;" color="azultecnm"  lines="full">
+        <ion-label>
+          <h2>
+
+            <strong>{{d[4]}}</strong>
+
+            <ion-button *ngIf="d[2]" [color]="colorStatus(d[1])" class="ion-float-right" size="small" shape="round" (click)="detalleDocumento(d[0])">
+              <ion-label>{{d[1]}}</ion-label>
+            </ion-button>
+
+          </h2>
+        </ion-label>
+      </ion-item>
+
+</ion-content>

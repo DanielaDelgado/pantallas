@@ -1,0 +1,126 @@
+<ion-header>
+  <ion-toolbar color="base">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+    <ion-img src="assets/image/logotecnm.png" style="max-width:50%;width:auto;height:auto;display:inline-flex;"></ion-img>
+    <ion-buttons slot="primary">
+        <ion-button color="azultecnm" (click)="onLogout()">
+          <ion-icon slot="icon-only" name="exit"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="azultecnm" text-center justify-content-center>
+  
+  <ion-card color="azultecnm" class="ion-margin">
+    <div>
+      <form [formGroup]="myForm">
+        <ion-item>
+          <ion-label position="stacked">Nombre</ion-label>
+          <ion-input formControlName="firstName" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Apellido Paterno</ion-label>
+          <ion-input formControlName="fatherLastName" type="text"></ion-input>
+        </ion-item> 
+        <ion-item>
+          <ion-label position="stacked">Apellido Materno</ion-label>
+          <ion-input formControlName="motherLastName" type="text"></ion-input>
+        </ion-item> 
+        <ion-item>
+          <ion-label position="stacked">Lugar de Nacimiento</ion-label>
+          <ion-input formControlName="birthPlace" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Fecha de Nacimiento</ion-label>
+          <ion-input formControlName="dateBirth" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Estado Civil</ion-label>
+          <ion-input formControlName="civilStatus" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Correo Electronico</ion-label>
+          <ion-input formControlName="email" type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">CURP</ion-label>
+          <ion-input formControlName="curp" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Sexo</ion-label>
+          <ion-input formControlName="sex" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Calle</ion-label>
+          <ion-input formControlName="street" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Suburbio</ion-label>
+          <ion-input formControlName="suburb" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Ciudad</ion-label>
+          <ion-input formControlName="city" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Estado</ion-label>
+          <ion-input formControlName="state" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Codigo Postal</ion-label>
+          <ion-input formControlName="cp" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Telefono</ion-label>
+          <ion-input formControlName="phone" type="tel"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Etnia</ion-label>
+          <ion-input formControlName="etnia" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Tipo de Etnia</ion-label>
+          <ion-input formControlName="typeEtnia" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Discapacidad</ion-label>
+          <ion-input formControlName="disability" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Tipo de Discapacidad</ion-label>
+          <ion-input formControlName="typeDisability" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Escuela de Origen</ion-label>
+          <ion-input formControlName="originSchool" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Otra Escuela</ion-label>
+          <ion-input formControlName="otherSchool" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Nombre de la Escuela de Origen</ion-label>
+          <ion-input formControlName="nameOriginSchool" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Promedio de la Escuela de Origen</ion-label>
+          <ion-input formControlName="averageOriginSchool" type="number" inputmode="decimal"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Numero de Seguro Social</ion-label>
+          <ion-input formControlName="nss" type="number"></ion-input>
+        </ion-item>
+      </form>
+    </div>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="saveInformation()">
+      <ion-icon name="save"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
